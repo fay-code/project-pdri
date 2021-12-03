@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body> 
-    @include('partials.navbar');
-
     <div class="container mt-3">
       @yield('container')
     </div>

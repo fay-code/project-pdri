@@ -16,10 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
-Route::post('/', [LoginController::class, 'auth']);
+// Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+
+Route::get('/test', function() {
+    return view('test');
+});
+
+Route::post('/', [LoginController::class, 'otentikasi']);
 
 Route::post('/logout', [LoginController::class, 'logout']);
 

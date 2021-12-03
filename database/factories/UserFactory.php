@@ -23,7 +23,8 @@ class UserFactory extends Factory
             'tanggal_lahir' => $this->faker->dateTime(),
             'jenis_kelamin' => 'male',
             'role' => 'admin',
-            'alamat' => $this->faker->paragraph(mt_rand(1,2))
+            'alamat' => $this->faker->paragraph(mt_rand(1,2)),
+            'remember_token' => Str::random(10),
         ];
     }
 

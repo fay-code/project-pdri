@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->char('jenis_kelamin');
             $table->char('role');
             $table->text('alamat');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
