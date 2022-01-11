@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,3 +38,7 @@ Route::get('/dashboard', function() {
 })->middleware('auth');
 
 Route::resource('/dashboard/detail', DashboardController::class)->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
